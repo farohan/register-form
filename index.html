@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <title>Practice Form</title>
+</head>
+<body>
+    <!-- method="GET" is used by Google to save and bookmark searches -->
+    <form action="https://formspree.io/f/xleawjgo" method="POST"> 
+        <div class="form-group">
+           <label for="name">Name</label>
+           <input name="name" id="name" type="text" autofocus maxlength="150" required> 
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input name="age" type="number" min="0" max="130" required>
+        </div>
+        <div class="form-group">
+            <label for="country">Country</label>
+            <input name="country" id="country" type="text" list="countries" maxlength="100" required>
+            <datalist id="countries">
+                <option data-value='1'>United States</option>
+                <option data-value="2">United Kingdom</option>
+                <option data-value="3">Russia</option>
+                <option data-value="4">China</option>
+                <option data-value="5">Canada</option>
+                <option data-value="6">India</option>
+                <option data-value="7">Australia</option>
+                <option data-value="8">Japan</option>
+            </datalist>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input name="email" type="email" id="email" maxlength="200" required>
+        </div>
+        <div class="form-group">
+            <select>
+                <optgroup label="Front-end Courses">
+                    <option value="1" selected>HTML</option>
+                    <option value="2">CSS</option>
+                    <option value="3">JavaScript</option>
+                </optgroup>
+                <optgroup label="Back-end Courses">
+                    <option value="4">Python</option>
+                    <option value="5">Java</option>
+                    <option value="6">C/C++</option>
+                </optgroup>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="file" multiple accept=".svg, .jpg, audio/*">
+        </div>
+        <button type="submit">Register</button>
+        <button type="reset">Clear</button>
+    </form>
+</body>
+</html>
